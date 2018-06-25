@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'> 
+<head>
+<meta charset='utf-8'> <title>Tableau de Bord à filtres</title>
+<script src='d3.min.js' type='text/javascript'></script>
+<script src='crossfilter.min.js' type='text/javascript'></script> 
+<script src='dc.min.js' type='text/javascript'></script>
+
+
+<script src='bootstrap.min.js' type='text/javascript'></script> 
+
+<link href='bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='dc.css' rel='stylesheet' type='text/css'> 
+<style type="text/css"></style>
+<style>
+  td {
+    padding-right: 10px;
+  };
+
+  .tablechart {
+    margin-left: 100px;
+  } 
+</style>
+</head>
+<body>
+
+<div class='container' id='zdrop'>
+<div class='content'>
+<div class='container' style='font: 12px sans-serif;'>
+
+<h3>Historique des factures</h3>
+<div class='row'>
+  <div class='span12'>
+    <div class="row">
+          <div id="data-count">
+          <span class="filter-count"></span>  factures sélectionnés parmi <span class="total-count"></span>  au total pour une valeur de <span id='total'></span>€
+          <a href="javascript:dc.filterAll(); dc.renderAll();">Reinit des filtres</a>
+        </div>
+  </div>
+      <div class='row'>
+        <div class='span6' id='type-chart'>
+        <h4>par type de clients</h4>
+        </div>
+        <div class='span6' id='age-chart'>
+        <h4>par age des factures</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='span6' id='time-chart'>
+      <h4>CA par mois </h4>
+    </div>
+    <!--
+  </div>
+  <div class='row'>
+  -->
+    <div class='span6' id='regl-chart'>
+      <h4>Factures réglées du mois</h4>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='span6 tablechart' id='client-table'>
+      <h4>Top 20 des clients facturés</h4>
+      
+    </div>
+    <div class='span6 tablechart' id='client-tableA'>
+      <h4>Top 20 des agences</h4>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+<div>Pour explorer les données: selectionner/déselectionner les barres horizontales, définir une fenêtre sur les graphes en clic gauche + glisser, ajuster avec les poignées. Déplacer les fenêtres en les faisant coulisser.
+  </div>
+</div>
+<script src="dcjs0.js">
+
+</script>
+ 
+</body>
+</html>
